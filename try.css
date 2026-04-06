@@ -1,0 +1,104 @@
+body{
+    font-family: 'Courier';
+    background-color: #0e2136;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+}
+h1{
+    margin: 10%;
+    /* background-color: rgb(114, 179, 191); */
+    background-color: pink;
+    border-radius: 20px;
+    width: 200px;
+    text-align: center;
+    font-size: 30px;
+    color: #510948;
+}
+input{
+    height: 50px;
+    width: auto;
+    text-align: center;
+    margin-right: 20px;
+    /* color: #00c3ff; */
+    color: #510948;
+    font-style: italic;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    /* background-color:rgba(31, 93, 143, 0.295); */
+    /* background-color: pink; */
+    background-color:cyan;
+}
+input:hover{
+    color:gold;
+    background-color:rgb(52, 116, 189) ;
+}
+
+input::placeholder{
+    /* color: #00c3ff; */
+    color: #510948;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+input:hover::placeholder{
+        color:gold;
+}
+button{
+    /* color:rgb(0, 128, 102); */
+    color: #510948;
+    background-color:pink ;
+    border-radius: 50px;
+    height: inherit;
+    aspect-ratio: 1/0.9;
+}
+button:hover{
+
+    color:gold;
+    background-color:rgb(52, 116, 189) ;
+}
+@property --deg{
+    syntax: '<angle>';
+    inherits: true;
+    initial-value: 0deg;
+}
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 600px;
+    aspect-ratio: 1/1;
+    background-color: #142d4a;
+    border-radius: 40px;
+    position:relative;
+}
+
+.container::before,.container::after{
+    content: "";
+    position: absolute;
+    /* inset: -3px; */
+    background: conic-gradient(
+    from var(--deg) at center,
+    #00c3ff,
+    #4d0199,
+    #6300c6,
+    pink,
+    #009dcd,
+    rgb(92, 46, 46),
+    #b333cf);
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    z-index: -2;
+    padding : 2px;
+    animation : autorotate 2s linear infinite;
+}
+@keyframes autorotate {
+    to{
+        --deg:360deg;
+    }
+}
+.container::after{
+
+    filter: blur(10px);
+}
