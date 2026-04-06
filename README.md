@@ -11,7 +11,7 @@ A clean and responsive To-Do List application built using HTML, CSS, and JavaScr
 - JavaScript
 
 ## Preview
-To_Do_Preview.png
+![Preview](image.png)
 
 ## Live Demo
 (https://rajveer-rajpurohit.github.io/to-do-list/)
